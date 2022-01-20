@@ -1,10 +1,107 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+    <div id="div1"
+         style="width: 20px;height: 20px;
+         border: 1px solid black" >
 
+    </div>
+    <script>
+        // let div1 = document.getElementById("div1")
+        // div1.onclick = function (){
+        //     // 将作用域保存
+        //     // let _this = this
+        //     setTimeout(()=>{
+        //         // _this.style.backgroundColor="pink"
+        //         this.style.backgroundColor="pink"
+        //     },2000)
+        // }
+        //
+        // const arr = [1,2,3,4,5,6,7,8]
+        // const result = arr.filter(function (item){
+        //     return item % 2 === 0;
+        // })
+        // console.log(result)
+
+        // function date(...args){
+        //     console.log(args)
+        // }
+        // date('1','2','3')
+
+        // function fn(a,b,...args){
+        //     console.log(a)
+        //     console.log(b)
+        //     console.log(args)
+        // }
+        // fn(1,2,3,4,5,6,7,8)
+
+        // function zeroCount(arr) {
+        //     const length = arr.length
+        //     // 不能这样写，因为会无限循环，因为你i遍历的长度是固定的，
+        //     // 到最后面会一直遍历0，由于i++和i--抵消，会产生循环
+        //     for (let i=0; i<length;i++){
+        //         if (arr[i]===0){
+        //             arr.splice(i,1)
+        //             arr.push(0)
+        //             // 因为索引位会变化
+        //                 i--
+        //         }
+        //         console.log(arr)
+        //     }
+        //     return arr
+        // }
+        // const arr = [1,0,0,0,0,1,2,0,3,4,0,66]
+        // let result = zeroCount(arr)
+        // console.log(result)
+
+
+
+
+        //
+        // function moveZero(arr){
+        //     let j=0;
+        //     for (let i=0;i<arr.length-j;i++)
+        //     {
+        //         if (arr[i]===0){
+        //             arr.splice(i,1)
+        //             arr.push(0)
+        //             j++
+        //             i--
+        //         }
+        //     }
+        //     return arr
+        // }
+        //
+        // const arr = [0,1,0,0,0,3,12]
+        // console.log(moveZero(arr))
+        //
+        // // 第三种方法移出数组中的零
+        // function moveZero3(arr){
+        //     let index = 0;
+        //     for (let i=0;i<arr.length;i++){
+        //         if (arr[i]===0){
+        //             index++
+        //         }else if (index!==0){
+        //             console.log("i="+i)
+        //             console.log("index="+index)
+        //             console.log(arr)
+        //             arr[i - index]=arr[i]
+        //             arr[i]=0
+        //         }
+        //     }
+        // }
+        //
+        // const arr = [0,1,0,0,0,3,12]
+        // moveZero3(arr)
+        // // console.log(moveZero3(arr))
+
+
+        let result = [1,2,3,]+[4,5,6]
+        console.log(result)
+
+    </script>
 </body>
 </html>
