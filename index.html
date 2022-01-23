@@ -98,6 +98,134 @@
         // let result = [1,2,3,]+[4,5,6]
         // console.log(result)
 
+
+
+        // 拓展运算符
+        // ... 拓展运算符能够将数组转换为逗号分隔的参数序列
+        // const tfboys = ['易烊千玺','王源','王俊凯']
+        // function chunwan(){
+        //     console.log(arguments)
+        // }
+        // // 这样的话只会输出一个数组，输出结果只是一个元素
+        // // chunwan(tfboys)
+        // //这样才能输出三个元素
+        // chunwan(...tfboys)
+
+
+        //拓展符的运用
+        // 1.数组的合并
+        // const kuaizi = ['王','肖']
+        // const fenghuang = ['曾毅','花']
+        // // const qwrqwe = kuaizi.concat(fenghuang)
+        // const qe = [...fenghuang,...kuaizi]
+        // console.log(qe)
+
+        //2.数组的克隆
+        // const szh= ['E','G','M']
+        // const ys = [...szh]
+        // console.log(ys)
+
+        //3.将伪数组转换成真正的数组
+
+
+
+        //引入了一个新的原始数据类型Symbol，表示独一无二的值
+        // let s = Symbol()
+        // console.log(s)
+
+        // let s2 = Symbol('上')
+        // let s3 = Symbol('上')
+        // //这种创建方法得出的两个Symbol是一样的
+        //
+        // let s4 = Symbol.for('xia')
+        // let s5 = Symbol.for('xia')
+        // console.log(s4===s5)//返回true
+        //这样创建出来的值是同一个Symbol
+
+
+        //Symbol的作用：
+        // let game = {
+        //     name:'elsfj',
+        //     up:function (a,b,c){
+        //         console.log('hhi')
+        //     }
+        // }
+        // let methods = {
+        //     up:Symbol(),
+        //     down:Symbol()
+        // }
+        //
+        // game[methods.up] = function (){
+        //     console.log('asdfasf')
+        // }
+        // game[methods.down] = function (){
+        //     console.log('asf')
+        // }
+        // console.log(game)
+
+        //添加Symbol类的方法
+        // let youxi = {
+        //     name:'狼人杀',
+        //     [Symbol('say')]:function () {
+        //         console.log('发言')
+        //     },
+        //     [zibao = Symbol()]:function (){
+        //       console.log('自爆')
+        //     }
+        // }
+        //
+        // //当需要调用对象中的Symbol方法时，这样调用才行
+        // youxi[zibao]()
+
+
+        //一道小小的算法题，将整型倒序后输出
+        // let n = 1234
+        // let result = n.toString()//将数字转换成为字符串
+        // result = result.split('')//将字符串分割成一个数组，
+        // // 分割的依据是每个字符都分割
+        // result = result.reverse()//将数组中的元素进行翻转
+        // result= result.join('')//将数组中的所有元素进行拼接，
+        // // 返回一个字符串,注意join的参数要传入‘'，不然无法拼接,
+        // //‘’的意思是拼接的两个字符之间拼接的内容是''，也就是为空，
+        // //两字符连在一起
+        //
+        // console.log(result)
+        //方法一
+        //
+        // function reverseNumber(n){
+        //     const str = n.toString()
+        //     if (str.length === 1){
+        //         //处理到最后一位
+        //         return str;
+        //     }else {
+        //         const length = str.length
+        //         //substring(length - 1 )返回的是这个字符串的最后一个字符，
+        //         // str.substring(0,length-1)返回的是这个字符串从第一个字符开始到最后一个字符之前的字符串，
+        //         //如果输入的是‘1234’，那么返回的就是‘123’，然后将这个字符串进行递归调用，不断获取最后一位
+        //         //最后返回
+        //         return str.substring(length - 1 ) + reverseNumber(str.substring(0,length-1))
+        //     }
+        // }
+        // const result1 = reverseNumber('asnasojvasavsvsvavsv')
+        // console.log(result1)
+        //方法2 数学的思想
+        function reverseNumber2(n) {
+            const num = Math.floor(n / 10)//向下取整，比如传入一个1234，返回123
+            if (num === 0){
+                return n.toString()
+            }
+            else {
+                return n%10 + reverseNumber2(num)
+            }
+        }
+        console.log(reverseNumber2(12345))
+
+
+
+
+
+
+
     </script>
 </body>
 </html>
